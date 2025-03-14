@@ -1,14 +1,19 @@
-﻿<!DOCTYPE html>
+---
+layout: landing_page
+title: "Philip Foster's Professional Portfolio"
+---
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philip Foster's Professional Portfolio</title>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/styles.css"> <!-- Make sure to link your CSS properly -->
     <style>
+        /* Inline styles (for any custom adjustments) */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #330000; /* Dark red background */
             color: #ffffff; /* White text color for contrast */
         }
@@ -23,15 +28,8 @@
             padding: 20px 0;
             text-align: center;
         }
-        section {
-            margin-bottom: 20px;
-        }
         h2 {
             color: #ffb3b3; /* Light red for headings */
-        }
-        p, a {
-            color: #fff; /* White text for paragraphs and links */
-            text-decoration: none; /* No underline on links */
         }
         .profile-pic {
             max-width: 100px; /* Adjust based on actual image size */
@@ -43,16 +41,22 @@
             padding: 10px;
             text-align: center;
         }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="pip.jpg" alt="Philip Foster" class="profile-pic">
-            <h1>Philip Foster's Professional Portfolio</h1>
-            <p>Aspiring Civil Engineer | Tech Enthusiast | Coffee Lover</p>
-        </div>
-    </header>
+
+  
 
     <div class="container">
         <section id="profile">
@@ -67,12 +71,12 @@
 
         <section id="skills">
             <h2>Key Skills</h2>
-            <p>Strong technical proficiency in computer assembly and server management, excellent project management skills from personal and academic projects, and a deep understanding of structural design and waste management principles. I Ran my local Cadet detachment (youth group) as a "Staff Sergeant" and in my time at cadets undertook several teaching courses, And delivered numerorus technical lessons, I also became profecient in first aid.</p>
+            <p>Strong technical proficiency in computer assembly and server management, excellent project management skills from personal and academic projects, and a deep understanding of structural design and waste management principles. I Ran my local Cadet detachment (youth group) as a "Staff Sergeant" and in my time at cadets undertook several teaching courses, And delivered numerous technical lessons. I also became proficient in first aid.</p>
         </section>
 
         <section id="work-experience">
             <h2>Work Experience</h2>
-            <p>Contributed significantly to maintenance and renovation projects during lockdown, showcasing abilities in manual labor, health and safety standards, and teamwork. Experience in café renovation demonstrates versatility and a strong work ethic. In 2022 I undertook a period of work experience at countryside properties group, at one of their london offices, while I was there I gained Site visit experience, as well as seeing project managment at every stage.</p>
+            <p>Contributed significantly to maintenance and renovation projects during lockdown, showcasing abilities in manual labor, health and safety standards, and teamwork. Experience in café renovation demonstrates versatility and a strong work ethic. In 2022, I undertook a period of work experience at Countryside Properties Group, at one of their London offices. While I was there, I gained site visit experience and saw project management at every stage.</p>
         </section>
 
         <section id="projects">
@@ -86,5 +90,18 @@
             <p>LinkedIn: <a href="https://www.linkedin.com/in/philip-foster-853349117/" target="_blank">Philip Foster</a></p>
         </div>
     </div>
+
+    <!-- Navigation Links -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
 </body>
 </html>

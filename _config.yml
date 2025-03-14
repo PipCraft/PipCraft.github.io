@@ -1,0 +1,7 @@
+title: "Philip Foster's Portfolio"
+description: "A portfolio site showcasing Philip Foster's work and blog."
+baseurl: "" # Leave this empty unless you're using a subfolder for your site
+url: "https://www.pipfoster.uk"  # Replace with your actual URL
+author:
+  name: "Philip Foster"
+  email: "pip@pipfoster.uk"
