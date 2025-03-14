@@ -1,7 +1,18 @@
-title: "Philip Foster's Portfolio"
-description: "A portfolio site showcasing Philip Foster's work and blog."
-baseurl: "" # Leave this empty unless you're using a subfolder for your site
-url: "https://www.pipfoster.uk"  # Replace with your actual URL
-author:
-  name: "Philip Foster"
-  email: "pip@pipfoster.uk"
+title: "Philip Foster's Professional Portfolio"
+description: "Philip Foster's personal site and blog."
+baseurl: "" # Keep empty unless your site is in a subdirectory
+url: "https://pipfoster.uk" # Your custom domain
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude the _site folder and other unnecessary files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _site
