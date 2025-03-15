@@ -51,14 +51,23 @@ header nav a {
 }
 
 /* Post content styles */
-.post-content {
-    margin-bottom: 40px; /* Added spacing for the entire post content */
+.post-content, .blog-index {
+    margin-bottom: 40px;
 }
 
-.post-content p {
+.post-content p, .blog-index p {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 20px; /* Adds spacing between paragraphs */
+    margin-bottom: 20px;
+}
+
+.blog-index h2 a {
+    color: #ffb3b3;
+    text-decoration: none;
+}
+
+.blog-index h2 a:hover {
+    text-decoration: underline;
 }
 
 /* Footer styles */
@@ -69,7 +78,7 @@ footer {
     padding: 15px;
 }
 
-/* Ensuring proper space between post elements */
+/* Post metadata */
 .post-meta {
-    margin-bottom: 20px; /* Added space between meta and content */
+    margin-bottom: 20px;
 }
