@@ -1,3 +1,5 @@
 layout: default
-title: "contact"
+title: Contact
+permalink: /contact/
 
+Please contact me by email: pip@pipfoster.uk :)
