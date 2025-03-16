@@ -1,3 +1,3 @@
-layout: page
+layout: default
 title: "contact"
-style: default
+
