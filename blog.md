@@ -13,7 +13,7 @@ permalink: /blog/
     <article class="blog-post">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p><strong>Published on:</strong> {{ post.date | date: "%B %d, %Y" }}</p>
-      <p class="excerpt">{{ post.excerpt }}</p>
+      <p class="excerpt">{{ post.excerpt | truncate: 100 }}</p>
       <a href="{{ post.url }}">Read More</a>
     </article>
   {% endfor %}
