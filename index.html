@@ -69,7 +69,7 @@ title: "Philip Foster's Professional Portfolio"
             flex: 1;
             min-width: 240px;
             max-width: 576px; /* Increased width by 20% */
-            padding: 10px;
+            padding: 20px; /* Added more padding for content */
             background-color: #5a1a1a;
             border-radius: 5px;
             box-sizing: border-box;
@@ -80,14 +80,21 @@ title: "Philip Foster's Professional Portfolio"
             color: #ffb3b3;
         }
 
-        /* Adjust the margin for Projects section */
+        /* Projects Section Styling */
         #projects {
-            margin-top: 40px; /* Adding space above projects section */
+            padding: 20px; /* Ensure padding is there */
+            background-color: #5a1a1a;
+            border-radius: 5px;
+            margin-top: 40px; /* Added top margin for space above */
         }
 
-        /* Ensure there is no overlap or margin stacking */
+        /* Ensure vertical spacing consistency */
+        section, #projects, .contact-info {
+            margin-top: 40px; /* Added space above each section */
+            margin-bottom: 40px; /* Added space below each section */
+        }
+
         .contact-info {
-            margin-top: 40px; /* Adding space between Contact info and Projects */
             padding: 20px;
             background-color: #5a1a1a;
             border-radius: 5px;
