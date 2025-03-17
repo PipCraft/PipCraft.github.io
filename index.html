@@ -60,19 +60,20 @@ title: "Philip Foster's Professional Portfolio"
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            flex-wrap: wrap;
+            margin-top: 40px; /* Added margin to the top for spacing */
         }
 
         /* Section Styling */
         .main-content section {
             flex: 1;
-            min-width: 240px; /* Smaller min-width for compact layout */
-            max-width: 480px; /* Restrict width of each box */
-            padding: 10px; /* Reduced padding */
+            min-width: 240px;
+            max-width: 480px;
+            padding: 10px;
             background-color: #5a1a1a;
-            border-radius: 5px; /* Reduced rounding */
-            box-sizing: border-box; /* Ensures padding doesn’t affect box size */
-            margin-bottom: 20px; /* Added margin between boxes */
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
         }
 
         .main-content section h2 {
@@ -81,19 +82,19 @@ title: "Philip Foster's Professional Portfolio"
 
         /* Projects Section */
         #projects {
-            padding: 10px; /* Reduced padding */
+            padding: 10px;
             background-color: #5a1a1a;
-            border-radius: 5px; /* Reduced rounding */
+            border-radius: 5px;
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .main-content {
-                flex-direction: column; /* Stack the sections vertically on small screens */
+                flex-direction: column;
             }
 
             .main-content section {
-                margin-bottom: 20px; /* Space between stacked sections */
+                margin-bottom: 20px;
             }
         }
     </style>
