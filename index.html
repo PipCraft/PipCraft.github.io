@@ -9,13 +9,15 @@ title: "Philip Foster's Professional Portfolio"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/styles.css"> <!-- Make sure to link your CSS properly -->
+    <link rel="stylesheet" href="/assets/styles.css">
     <style>
         /* Inline styles (for any custom adjustments) */
         body {
             font-family: Jost, sans-serif;
             background-color: #330000; /* Dark red background */
             color: #ffffff; /* White text color for contrast */
+            margin: 0;
+            padding: 0;
         }
         .container {
             max-width: 1200px;
@@ -23,21 +25,21 @@ title: "Philip Foster's Professional Portfolio"
             padding: 20px;
         }
         header {
-            background: #5a1a1a; /* Slightly lighter red for header */
+            background: #5a1a1a;
             color: #fff;
             padding: 20px 0;
             text-align: center;
         }
         h2 {
-            color: #ffb3b3; /* Light red for headings */
+            color: #ffb3b3;
         }
         .profile-pic {
-            max-width: 100px; /* Adjust based on actual image size */
-            border-radius: 10%; /* Circular image */
+            max-width: 100px;
+            border-radius: 10%;
             margin: 20px 0;
         }
         .contact-info {
-            background: #5a1a1a; /* Slightly lighter red for contact info section */
+            background: #5a1a1a;
             padding: 10px;
             text-align: center;
         }
@@ -52,33 +54,75 @@ title: "Philip Foster's Professional Portfolio"
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* Flexbox Layout for main content */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .main-content section {
+            flex: 1;
+            min-width: 250px; /* Ensures sections don’t become too narrow */
+            padding: 20px;
+            background-color: #5a1a1a;
+            border-radius: 8px;
+        }
+
+        .main-content section h2 {
+            color: #ffb3b3;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column; /* Stack the sections vertically on small screens */
+            }
+
+            .main-content section {
+                margin-bottom: 20px; /* Add space between stacked sections */
+            }
+        }
     </style>
 </head>
 <body>
 
-  
-
     <div class="container">
-        <section id="profile">
-            <h2>Personal Profile</h2>
-            <p>Confident, adaptable, and driven individual with a proven ability to lead, innovate, and overcome challenges. Extensive experience in leadership roles, engineering projects, and a commitment to excellence in academic pursuits.</p>
-        </section>
+        <header>
+            <h1>Philip Foster's Portfolio</h1>
+        </header>
 
-        <section id="education">
-            <h2>Education / Training</h2>
-            <p>Second-year Civil Engineering student at City University of London, with a focus on sustainable and smart housing solutions. Active in student union and president of the debating society, demonstrating strong leadership and organizational skills.</p>
-        </section>
+        <div class="main-content">
+            <!-- Personal Profile Section -->
+            <section id="profile">
+                <h2>Personal Profile</h2>
+                <p>Confident, adaptable, and driven individual with a proven ability to lead, innovate, and overcome challenges. Extensive experience in leadership roles, engineering projects, and a commitment to excellence in academic pursuits.</p>
+            </section>
 
-        <section id="skills">
-            <h2>Key Skills</h2>
-            <p>Strong technical proficiency in computer assembly and server management, excellent project management skills from personal and academic projects, and a deep understanding of structural design and waste management principles. I Ran my local Cadet detachment (youth group) as a "Staff Sergeant" and in my time at cadets undertook several teaching courses, And delivered numerous technical lessons. I also became proficient in first aid.</p>
-        </section>
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education / Training</h2>
+                <p>Second-year Civil Engineering student at City University of London, with a focus on sustainable and smart housing solutions. Active in student union and president of the debating society, demonstrating strong leadership and organizational skills.</p>
+            </section>
+        </div>
 
-        <section id="work-experience">
-            <h2>Work Experience</h2>
-            <p>Contributed significantly to maintenance and renovation projects during lockdown, showcasing abilities in manual labor, health and safety standards, and teamwork. Experience in café renovation demonstrates versatility and a strong work ethic. In 2022, I undertook a period of work experience at Countryside Properties Group, at one of their London offices. While I was there, I gained site visit experience and saw project management at every stage.</p>
-        </section>
+        <div class="main-content">
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>Key Skills</h2>
+                <p>Strong technical proficiency in computer assembly and server management, excellent project management skills from personal and academic projects, and a deep understanding of structural design and waste management principles. I Ran my local Cadet detachment (youth group) as a "Staff Sergeant" and in my time at cadets undertook several teaching courses, And delivered numerous technical lessons. I also became proficient in first aid.</p>
+            </section>
 
+            <!-- Work Experience Section -->
+            <section id="work-experience">
+                <h2>Work Experience</h2>
+                <p>Contributed significantly to maintenance and renovation projects during lockdown, showcasing abilities in manual labor, health and safety standards, and teamwork. Experience in café renovation demonstrates versatility and a strong work ethic. In 2022, I undertook a period of work experience at Countryside Properties Group, at one of their London offices. While I was there, I gained site visit experience and saw project management at every stage.</p>
+            </section>
+        </div>
+
+        <!-- Projects Section -->
         <section id="projects">
             <h2>Technical and Personal Projects</h2>
             <p>From designing and building custom computers to creating an outdoor pond by upcycling materials, these projects highlight creativity, technical skills, and a commitment to environmental sustainability.</p>
