@@ -61,8 +61,7 @@ title: "Philip Foster's Professional Portfolio"
             justify-content: space-between;
             gap: 20px;
             flex-wrap: wrap;
-            margin-top: 40px; /* Added margin to the top for spacing */
-            margin-bottom: 40px; /* Added consistent bottom margin */
+            margin-top: 40px; /* Top margin for spacing */
         }
 
         /* Section Styling */
@@ -74,16 +73,22 @@ title: "Philip Foster's Professional Portfolio"
             background-color: #5a1a1a;
             border-radius: 5px;
             box-sizing: border-box;
-            margin-bottom: 30px; /* Added consistent bottom margin */
+            margin-bottom: 40px; /* Consistent bottom margin */
         }
 
         .main-content section h2 {
             color: #ffb3b3;
         }
 
-        /* Projects Section */
+        /* Adjust the margin for Projects section */
         #projects {
-            padding: 10px;
+            margin-top: 40px; /* Adding space above projects section */
+        }
+
+        /* Ensure there is no overlap or margin stacking */
+        .contact-info {
+            margin-top: 40px; /* Adding space between Contact info and Projects */
+            padding: 20px;
             background-color: #5a1a1a;
             border-radius: 5px;
         }
@@ -96,6 +101,10 @@ title: "Philip Foster's Professional Portfolio"
 
             .main-content section {
                 margin-bottom: 20px; /* Reduced space between stacked sections on small screens */
+            }
+
+            #projects, .contact-info {
+                margin-top: 20px;
             }
         }
     </style>
@@ -141,6 +150,7 @@ title: "Philip Foster's Professional Portfolio"
             <p>From designing and building custom computers to creating an outdoor pond by upcycling materials, these projects highlight creativity, technical skills, and a commitment to environmental sustainability.</p>
         </section>
 
+        <!-- Contact Information Section -->
         <div class="contact-info">
             <h2>Contact Information</h2>
             <p>Email: <a href="mailto:pip@pipfoster.uk">pip@pipfoster.uk</a></p>
