@@ -1,32 +1,28 @@
----
-layout: landing_page
-title: "Philip Foster's Professional Portfolio"
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
+  <title>Philip Foster's Professional Portfolio</title>
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">Philip Foster</a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      ☰
-    </button>
-    <ul class="nav-menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/coffee">Coffee</a></li>
-    </ul>
-  </div>
-</nav>
+
+  <!-- Responsive Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">Philip Foster</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/coffee">Coffee</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="container">
     <header>
       <h1>Philip Foster's Portfolio</h1>
@@ -37,45 +33,50 @@ title: "Philip Foster's Professional Portfolio"
     <div class="main-content">
       <section class="clickable card-box" onclick="window.location.href='/blog';">
         <h2>📖 Read My Blog</h2>
-        <p>Catch up on my thoughts, updates, and posts on engineering, projects, and more.</p>
+        <p>Thoughts, updates, and posts on engineering, projects, and more.</p>
       </section>
       <section class="clickable card-box" onclick="window.location.href='/coffee';">
         <h2>☕ My Coffee Thoughts</h2>
-        <p>Explore my favourite brews, gear, and ramblings about beans, methods, and coffee nerdery.</p>
+        <p>My favourite brews, gear, and coffee-related ramblings.</p>
       </section>
     </div>
 
+    <!-- Profile Section -->
     <div class="main-content">
       <section id="profile" class="card-box">
+        <img src="/assets/profile.jpg" alt="Philip Foster" class="profile-pic" />
         <h2>Personal Profile</h2>
-        <p>Confident, adaptable, and driven individual with a proven ability to lead, innovate, and overcome challenges. Extensive experience in leadership roles, engineering projects, and a commitment to excellence in academic pursuits.</p>
+        <p>Confident, adaptable, and driven individual with experience in leadership roles, engineering projects, and a commitment to academic excellence.</p>
       </section>
 
       <section id="education" class="card-box">
         <h2>Education / Training</h2>
-        <p>Second-year Civil Engineering student at City University of London, with a focus on sustainable and smart housing solutions. Active in student union and president of the debating society, demonstrating strong leadership and organizational skills.</p>
+        <p>Civil Engineering student at City University of London, with a focus on sustainable and smart housing. Active in student union and president of the debating society.</p>
       </section>
     </div>
 
+    <!-- Skills and Experience -->
     <div class="main-content">
       <section id="skills" class="card-box">
         <h2>Key Skills</h2>
-        <p>Strong technical proficiency in computer assembly and server management, excellent project management skills from personal and academic projects, and a deep understanding of structural design and waste management principles. I ran my local Cadet detachment (youth group) as a "Staff Sergeant" and in my time at cadets undertook several teaching courses, and delivered numerous technical lessons. I also became proficient in first aid.</p>
+        <p>Technical proficiency in server management and computer assembly, project management, structural design, and first aid. Experience teaching and leading in cadets as Staff Sergeant.</p>
       </section>
 
       <section id="work-experience" class="card-box">
         <h2>Work Experience</h2>
-        <p>Contributed significantly to maintenance and renovation projects during lockdown, showcasing abilities in manual labor, health and safety standards, and teamwork. Experience in café renovation demonstrates versatility and a strong work ethic. In 2022, I undertook a period of work experience at Countryside Properties Group, at one of their London offices. While I was there, I gained site visit experience and saw project management at every stage.</p>
+        <p>Hands-on experience in café renovation, maintenance projects, and a 2022 work placement at Countryside Properties Group. Gained exposure to site visits and full project cycles.</p>
       </section>
     </div>
 
+    <!-- Projects -->
     <div class="centered-row">
       <section id="projects" class="card-box">
         <h2>Technical and Personal Projects</h2>
-        <p>From designing and building custom computers to creating an outdoor pond by upcycling materials, these projects highlight creativity, technical skills, and a commitment to environmental sustainability.</p>
+        <p>Projects include custom computer builds, pond construction using upcycled materials, and engineering design simulations focused on sustainability and innovation.</p>
       </section>
     </div>
 
+    <!-- Contact Info -->
     <div class="centered-row">
       <section class="contact-info card-box">
         <h2>Contact Information</h2>
@@ -85,7 +86,7 @@ title: "Philip Foster's Professional Portfolio"
     </div>
   </div>
 
-  <!-- Navigation -->
+  <!-- Footer Navigation -->
   <footer>
     <nav>
       <ul>
@@ -97,6 +98,18 @@ title: "Philip Foster's Professional Portfolio"
       </ul>
     </nav>
   </footer>
+
+  <!-- Responsive Nav Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      toggleButton.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
