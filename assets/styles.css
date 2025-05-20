@@ -1,140 +1,156 @@
-/* General reset */
+/* === RESET === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body styles */
+/* === BODY === */
 body {
-    font-family: 'Jost', sans-serif;
-    background-color: #330000;
-    color: #ffffff;
-    line-height: 1.6;
+  font-family: 'Jost', sans-serif;
+  background-color: #330000;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-/* Container styles */
+/* === CONTAINER === */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Header styles */
+/* === HEADER === */
 header {
-    background-color: #5a1a1a;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #5a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.2rem;
+  margin-bottom: 5px;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+.tagline {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #ffcccc;
+  margin-bottom: 0;
 }
 
-header nav li {
-    display: inline-block;
-    margin-right: 20px;
+/* === NAVIGATION === */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Post content styles */
-.post-content, .blog-index {
-    margin-bottom: 40px;
+/* === FLEX CONTAINERS === */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-.post-content p, .blog-index p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.main-content:first-of-type {
+  margin-top: 20px;
 }
 
-.blog-index h2 a {
-    color: #ffb3b3;
-    text-decoration: none;
+.centered-row {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
 }
 
-.blog-index h2 a:hover {
-    text-decoration: underline;
-}
-
-/* Footer styles */
-footer {
-    background-color: #5a1a1a;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-}
-
-/* Post metadata */
-.post-meta {
-    margin-bottom: 20px;
-}
-/* === Reusable Card Styles === */
+/* === CARD SECTION === */
 .card-box {
-    flex: 1;
-    min-width: 240px;
-    max-width: 576px;
-    padding: 20px;
-    background-color: #5a1a1a;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 40px;
-    transition: all 0.2s ease-in-out;
+  flex: 1;
+  min-width: 240px;
+  max-width: 576px;
+  padding: 20px;
+  background-color: #5a1a1a;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  transition: all 0.2s ease-in-out;
 }
 
 .card-box:hover {
-    outline: 2px solid #ffb3b3;
-    transform: scale(1.02);
-    background-color: #6a1a1a;
+  outline: 2px solid #ffb3b3;
+  transform: scale(1.02);
+  background-color: #6a1a1a;
 }
 
 .card-box h2,
 .card-box p {
-    text-align: center;
+  text-align: center;
 }
 
-/* === Centered Row Container === */
-.centered-row {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
+/* === CLICKABLE BOXES === */
+.clickable {
+  cursor: pointer;
 }
 
-/* === Tagline under header === */
-.tagline {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: #ffcccc;
+/* === FOOTER === */
+footer {
+  background-color: #5a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
 }
 
-/* === Footer navigation links === */
 footer nav a {
-    font-size: 0.9rem;
-    color: #ffcccc;
+  font-size: 0.9rem;
+  color: #ffcccc;
 }
 
-/* === Responsive Layout === */
-@media (max-width: 768px) {
-    .centered-row {
-        flex-direction: column;
-        align-items: center;
-    }
+/* === BLOG/POST STYLING === */
+.post-content,
+.blog-index {
+  margin-bottom: 40px;
+}
 
-    .card-box {
-        margin-bottom: 20px;
-    }
+.post-content p,
+.blog-index p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.blog-index h2 a {
+  color: #ffb3b3;
+  text-decoration: none;
+}
+
+.blog-index h2 a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .centered-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-box {
+    margin-bottom: 20px;
+  }
 }
