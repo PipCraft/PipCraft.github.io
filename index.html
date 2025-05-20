@@ -6,193 +6,201 @@ title: "Philip Foster's Professional Portfolio"
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/styles.css">
-    <style>
-        /* Base Styles */
-        body {
-            font-family: Jost, sans-serif;
-            background-color: #330000;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            background: #5a1a1a;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        h2 {
-            color: #ffb3b3;
-        }
-        .profile-pic {
-            max-width: 100px;
-            border-radius: 10%;
-            margin: 20px 0;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 0;
-            margin: 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <style>
+    body {
+      font-family: Jost, sans-serif;
+      background-color: #330000;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    header {
+      background: #5a1a1a;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    h2 {
+      color: #ffb3b3;
+    }
 
-        /* Layout for content blocks */
-        .main-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .main-content section {
-            flex: 1;
-            min-width: 240px;
-            max-width: 576px;
-            padding: 20px;
-            background-color: #5a1a1a;
-            border-radius: 5px;
-            box-sizing: border-box;
-            margin-bottom: 40px;
-            transition: all 0.2s ease-in-out;
-        }
+    /* Layout for content blocks */
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
 
-        .main-content section h2 {
-            color: #ffb3b3;
-        }
+    .main-content:first-of-type {
+      margin-top: 20px;
+    }
 
-        /* Hover effect for interactivity */
-        .main-content section:hover {
-            outline: 2px solid #ffb3b3;
-            transform: scale(1.02);
-        }
+    .main-content section {
+      flex: 1;
+      min-width: 240px;
+      max-width: 576px;
+      padding: 20px;
+      background-color: #5a1a1a;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 40px;
+      transition: all 0.2s ease-in-out;
+    }
 
-        /* Special clickable sections */
-        .clickable {
-            cursor: pointer;
-        }
+    .main-content section h2 {
+      color: #ffb3b3;
+      text-align: center;
+    }
 
-        /* Projects & Contact styling */
-        #projects, .contact-info {
-            margin: 40px 0;
-            padding: 20px;
-            background-color: #5a1a1a;
-            border-radius: 5px;
-            transition: all 0.2s ease-in-out;
-        }
+    .main-content section p {
+      text-align: center;
+    }
 
-        #projects:hover, .contact-info:hover {
-            outline: 2px solid #ffb3b3;
-            transform: scale(1.02);
-        }
+    .main-content section:hover {
+      outline: 2px solid #ffb3b3;
+      transform: scale(1.02);
+      background-color: #6a1a1a;
+    }
 
-        .contact-info {
-            text-align: center;
-        }
+    .clickable {
+      cursor: pointer;
+    }
 
-        /* Responsive tweaks */
-        @media (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
-            }
+    #projects, .contact-info {
+      margin: 40px 0;
+      padding: 20px;
+      background-color: #5a1a1a;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+    }
 
-            .main-content section {
-                margin-bottom: 20px;
-            }
+    #projects:hover, .contact-info:hover {
+      outline: 2px solid #ffb3b3;
+      transform: scale(1.02);
+      background-color: #6a1a1a;
+    }
 
-            #projects, .contact-info {
-                margin-top: 20px;
-            }
-        }
-    </style>
+    .contact-info {
+      text-align: center;
+    }
+
+    footer nav a {
+      font-size: 0.9rem;
+      color: #ffcccc;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .main-content section {
+        margin-bottom: 20px;
+      }
+
+      #projects, .contact-info {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Philip Foster's Portfolio</h1>
-        </header>
+  <div class="container">
+    <header>
+      <h1>Philip Foster's Portfolio</h1>
+    </header>
 
-        <!-- Top Link Boxes -->
-        <div class="main-content">
-            <section class="clickable" onclick="window.location.href='/blog';">
-                <h2>Read My Blog</h2>
-                <p>Catch up on my thoughts, updates, and posts on engineering, projects, and more.</p>
-            </section>
-            <section class="clickable" onclick="window.location.href='/coffee';">
-                <h2>My Coffee Thoughts</h2>
-                <p>Explore my favourite brews, gear, and ramblings about beans, methods, and coffee nerdery.</p>
-            </section>
-        </div>
-
-        <div class="main-content">
-            <section id="profile">
-                <h2>Personal Profile</h2>
-                <p>Confident, adaptable, and driven individual with a proven ability to lead, innovate, and overcome challenges. Extensive experience in leadership roles, engineering projects, and a commitment to excellence in academic pursuits.</p>
-            </section>
-
-            <section id="education">
-                <h2>Education / Training</h2>
-                <p>Second-year Civil Engineering student at City University of London, with a focus on sustainable and smart housing solutions. Active in student union and president of the debating society, demonstrating strong leadership and organizational skills.</p>
-            </section>
-        </div>
-
-        <div class="main-content">
-            <section id="skills">
-                <h2>Key Skills</h2>
-                <p>Strong technical proficiency in computer assembly and server management, excellent project management skills from personal and academic projects, and a deep understanding of structural design and waste management principles. I Ran my local Cadet detachment (youth group) as a "Staff Sergeant" and in my time at cadets undertook several teaching courses, And delivered numerous technical lessons. I also became proficient in first aid.</p>
-            </section>
-
-            <section id="work-experience">
-                <h2>Work Experience</h2>
-                <p>Contributed significantly to maintenance and renovation projects during lockdown, showcasing abilities in manual labor, health and safety standards, and teamwork. Experience in café renovation demonstrates versatility and a strong work ethic. In 2022, I undertook a period of work experience at Countryside Properties Group, at one of their London offices. While I was there, I gained site visit experience and saw project management at every stage.</p>
-            </section>
-        </div>
-
-        <div class="main-content">
-            <section id="projects">
-                <h2>Technical and Personal Projects</h2>
-                <p>From designing and building custom computers to creating an outdoor pond by upcycling materials, these projects highlight creativity, technical skills, and a commitment to environmental sustainability.</p>
-            </section>
-        </div>
-
-        <div class="main-content">
-            <section class="contact-info">
-                <h2>Contact Information</h2>
-                <p>Email: <a href="mailto:pip@pipfoster.uk">pip@pipfoster.uk</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/philip-foster-853349117/" target="_blank">Philip Foster</a></p>
-            </section>
-        </div>
+    <!-- Top Link Boxes -->
+    <div class="main-content">
+      <section class="clickable" onclick="window.location.href='/blog';">
+        <h2>📖 Read My Blog</h2>
+        <p>Catch up on my thoughts, updates, and posts on engineering, projects, and more.</p>
+      </section>
+      <section class="clickable" onclick="window.location.href='/coffee';">
+        <h2>☕ My Coffee Thoughts</h2>
+        <p>Explore my favourite brews, gear, and ramblings about beans, methods, and coffee nerdery.</p>
+      </section>
     </div>
 
-    <!-- Navigation -->
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/coffee">Coffee</a></li>
-            </ul>
-        </nav>
-    </footer>
+    <div class="main-content">
+      <section id="profile">
+        <h2>Personal Profile</h2>
+        <p>Confident, adaptable, and driven individual with a proven ability to lead, innovate, and overcome challenges. Extensive experience in leadership roles, engineering projects, and a commitment to excellence in academic pursuits.</p>
+      </section>
+
+      <section id="education">
+        <h2>Education / Training</h2>
+        <p>Second-year Civil Engineering student at City University of London, with a focus on sustainable and smart housing solutions. Active in student union and president of the debating society, demonstrating strong leadership and organizational skills.</p>
+      </section>
+    </div>
+
+    <div class="main-content">
+      <section id="skills">
+        <h2>Key Skills</h2>
+        <p>Strong technical proficiency in computer assembly and server management, excellent project management skills from personal and academic projects, and a deep understanding of structural design and waste management principles. I ran my local Cadet detachment (youth group) as a "Staff Sergeant" and in my time at cadets undertook several teaching courses, and delivered numerous technical lessons. I also became proficient in first aid.</p>
+      </section>
+
+      <section id="work-experience">
+        <h2>Work Experience</h2>
+        <p>Contributed significantly to maintenance and renovation projects during lockdown, showcasing abilities in manual labor, health and safety standards, and teamwork. Experience in café renovation demonstrates versatility and a strong work ethic. In 2022, I undertook a period of work experience at Countryside Properties Group, at one of their London offices. While I was there, I gained site visit experience and saw project management at every stage.</p>
+      </section>
+    </div>
+
+    <div class="main-content">
+      <section id="projects">
+        <h2>Technical and Personal Projects</h2>
+        <p>From designing and building custom computers to creating an outdoor pond by upcycling materials, these projects highlight creativity, technical skills, and a commitment to environmental sustainability.</p>
+      </section>
+    </div>
+
+    <div class="main-content">
+      <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:pip@pipfoster.uk">pip@pipfoster.uk</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/philip-foster-853349117/" target="_blank">Philip Foster</a></p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/coffee">Coffee</a></li>
+      </ul>
+    </nav>
+  </footer>
 
 </body>
 </html>
