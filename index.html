@@ -8,6 +8,7 @@ title: "Philip Foster's Professional Portfolio"
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }}</title>
+  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
   <link rel="stylesheet" href="/assets/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -32,7 +33,7 @@ title: "Philip Foster's Professional Portfolio"
 
   <div class="container">
     <header class="profile-banner">
-      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Philip Foster" />
+      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" style="width: 96px; height: 96px; border-radius: 12px; object-fit: cover;" alt="Philip Foster" />
       <h1>{{ page.title }}</h1>
       <div class="tagline">Aspiring Civil Engineer | Tech Enthusiast | Coffee Lover</div>
     </header>
