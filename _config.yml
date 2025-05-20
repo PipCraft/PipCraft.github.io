@@ -9,6 +9,11 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+collections:
+  coffee:
+    output: true
+    permalink: /coffee/:title/
+
 # Exclude the _site folder and other unnecessary files
 exclude:
   - Gemfile
