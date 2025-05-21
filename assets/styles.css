@@ -173,3 +173,54 @@ footer nav a {
     margin-bottom: 20px;
   }
 }
+.blog-posts {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 2rem;
+}
+
+.blog-post {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-3px);
+}
+
+.blog-post h3 {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.blog-post a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tags {
+  margin: 0.5rem 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #eee;
+  color: #333;
+  padding: 0.25em 0.6em;
+  font-size: 0.8em;
+  border-radius: 999px;
+  margin-right: 0.4em;
+}
