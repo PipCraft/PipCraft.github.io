@@ -173,19 +173,24 @@ footer nav a {
     margin-bottom: 20px;
   }
 }
+/* BLOG PAGE STYLING */
 .blog-posts {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 .blog-post {
-  background-color: #fff0f0; /* Light red background */
-  border-left: 6px solid #cc0000; /* Bold red accent line */
+  background-color: #440000; /* Rich red card background */
+  border-left: 6px solid #cc4444; /* Accent stripe */
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -197,12 +202,12 @@ footer nav a {
 .blog-post h3 {
   margin-top: 0;
   font-size: 1.5rem;
-  color: #b30000; /* Deep red for titles */
+  color: #ffcccc;
 }
 
 .blog-post a {
   text-decoration: none;
-  color: #b30000;
+  color: #ff6666;
 }
 
 .blog-post a:hover {
@@ -223,10 +228,20 @@ footer nav a {
 
 .tag {
   display: inline-block;
-  background-color: #ffe5e5;
-  color: #990000;
+  background-color: #661111;
+  color: #ffcccc;
   padding: 0.25em 0.6em;
   font-size: 0.8em;
   border-radius: 999px;
   margin-right: 0.5em;
+}
+
+/* GENERAL TYPOGRAPHY MATCHING */
+body {
+  background-color: #330000; /* Deep red background */
+  color: #f0f0f0;
+}
+
+h1, h2 {
+  color: #ffffff;
 }
