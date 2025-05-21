@@ -173,7 +173,7 @@ footer nav a {
     margin-bottom: 20px;
   }
 }
-/* BLOG PAGE STYLING */
+/* === BLOG SECTION === */
 .blog-posts {
   display: flex;
   flex-direction: column;
@@ -183,20 +183,20 @@ footer nav a {
 }
 
 .blog-post {
-  background-color: #440000; /* Rich red card background */
-  border-left: 6px solid #cc4444; /* Accent stripe */
+  background-color: #440000;
+  border-left: 6px solid #cc4444;
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .blog-post:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .blog-post h3 {
@@ -214,14 +214,6 @@ footer nav a {
   text-decoration: underline;
 }
 
-.post-thumbnail {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
-}
-
 .tags {
   margin-top: 0.5rem;
 }
@@ -236,12 +228,48 @@ footer nav a {
   margin-right: 0.5em;
 }
 
-/* GENERAL TYPOGRAPHY MATCHING */
-body {
-  background-color: #330000; /* Deep red background */
-  color: #f0f0f0;
+/* === COFFEE INDEX SECTION === */
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
 }
 
-h1, h2 {
-  color: #ffffff;
+.coffee-card {
+  background-color: #2d0000;
+  border-left: 6px solid #aa0000;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.coffee-card:hover {
+  transform: translateY(-4px);
+}
+
+.coffee-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  color: #ff9999;
+}
+
+.coffee-card a {
+  color: #ff9999;
+  text-decoration: none;
+}
+
+.coffee-card a:hover {
+  text-decoration: underline;
+}
+
+.coffee-thumbnail {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
 }
