@@ -7,8 +7,21 @@
     <link rel="stylesheet" href="/assets/styles.css">
     <link rel="icon" href="{{ '/assets/images/pip.jpg' | relative_url }}" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- 🔍 Open Graph for rich previews (e.g. Facebook, Discord) -->
+    <meta property="og:title" content="{{ page.title | escape }}" />
+    <meta property="og:description" content="Pip Foster’s personal site – civil engineering, code, and coffee." />
+    <meta property="og:image" content="https://pipfoster.uk/assets/images/pip.jpg" />
+    <meta property="og:url" content="https://pipfoster.uk{{ page.url }}" />
+    <meta property="og:type" content="website" />
+
+    <!-- 🐦 Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page.title | escape }}" />
+    <meta name="twitter:description" content="Pip Foster’s personal site – civil engineering, code, and coffee." />
+    <meta name="twitter:image" content="https://pipfoster.uk/assets/images/pip.jpg" />
 </head>
 <body>
     <header>
