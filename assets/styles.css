@@ -286,3 +286,33 @@ footer nav a {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+/* Landing Page Background */
+body.landing {
+  background-color: #b54c4c;
+  background-image: url('/assets/images/hills.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
+}
+
+/* Optional overlay to preserve readability */
+body.landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(181, 76, 76, 0.6); /* semi-transparent red tint */
+  z-index: -1;
+}
+
+/* Ensure content is visible over the overlay */
+body.landing main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 1rem;
+  z-index: 1;
+}
