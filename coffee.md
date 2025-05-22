@@ -18,7 +18,7 @@ permalink: /coffee/
         <p><strong>Type:</strong> {{ item.type }}</p>
         {% if item.roast %}<p><strong>Roast:</strong> {{ item.roast }}</p>{% endif %}
         {% if item.brew %}<p><strong>Brew:</strong> {{ item.brew }}</p>{% endif %}
-        {% if item.rating %}<p><strong>Rating:</strong> ⭐ {{ item.rating }}/5</p>{% endif %}
+        {% if item.rating %}<p><strong>Rating:</strong> ⭐ {{ item.rating }}/10</p>{% endif %}
       </div>
     </article>
   {% endfor %}
