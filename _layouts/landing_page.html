@@ -1,52 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="icon" href="{{ '/assets/images/pip.jpg' | relative_url }}" type="image/jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="{{ '/assets/images/pip.jpg' | relative_url }}" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- 🔍 Open Graph for rich previews (e.g. Facebook, Discord) -->
-    <meta property="og:title" content="{{ page.title | escape }}" />
-    <meta property="og:description" content="Pip Foster’s personal site – civil engineering, code, and coffee." />
-    <meta property="og:image" content="https://pipfoster.uk/assets/images/pip.jpg" />
-    <meta property="og:url" content="https://pipfoster.uk{{ page.url }}" />
-    <meta property="og:type" content="website" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | escape }}" />
+  <meta property="og:description" content="Pip Foster’s personal site – civil engineering, code, and coffee." />
+  <meta property="og:image" content="https://pipfoster.uk/assets/images/pip.jpg" />
+  <meta property="og:url" content="https://pipfoster.uk{{ page.url }}" />
+  <meta property="og:type" content="website" />
 
-    <!-- 🐦 Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ page.title | escape }}" />
-    <meta name="twitter:description" content="Pip Foster’s personal site – civil engineering, code, and coffee." />
-    <meta name="twitter:image" content="https://pipfoster.uk/assets/images/pip.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.title | escape }}" />
+  <meta name="twitter:description" content="Pip Foster’s personal site – civil engineering, code, and coffee." />
+  <meta name="twitter:image" content="https://pipfoster.uk/assets/images/pip.jpg" />
+
+  <style>
+    body.landing {
+      background-color: #b54c4c;
+      background-image: url('/assets/images/hills.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      position: relative;
+    }
+
+    body.landing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(181, 76, 76, 0.6);
+      z-index: -1;
+    }
+
+    body.landing main {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 1rem;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <img src="/assets/images/pip.jpg" alt="Philip Foster" class="profile-pic">
-            <h1>{{ page.title }}</h1>
-            <p>Aspiring Civil Engineer | Tech Enthusiast | Coffee Lover</p>
-            <!-- Navigation Links -->
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li> <!-- Home link -->
-                    <li><a href="/blog">Blog</a></li> <!-- Blog link -->
-                    <li><a href="/about">About</a></li> <!-- About link -->
-                    <li><a href="/contact">Contact</a></li> <!-- Contact link -->
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        {{ content }}
-    </main>
+<body class="landing">
+  <header>
+    <div class="container">
+      <img src="/assets/images/pip.jpg" alt="Philip Foster" class="profile-pic">
+      <h1>{{ page.title }}</h1>
+      <p>Aspiring Civil Engineer | Tech Enthusiast | Coffee Lover</p>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} Philip Foster. All rights reserved.</p>
-    </footer>
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} Philip Foster. All rights reserved.</p>
+  </footer>
 </body>
 </html>
