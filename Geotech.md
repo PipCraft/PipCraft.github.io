@@ -123,6 +123,94 @@ Even if you're not remediating a chemical spill, **CSMs help manage geotechnical
 
 > “You can’t manage risk if you don’t understand it. That’s what a CSM is for.”
 
-Next: We'll cover **Darcy's Law and seepage analysis**, the key tool for predicting how water and contaminants actually move.
+## 🔹 1. Darcy’s Law & Seepage
 
+**Key Formulas:**
+
+- \( q = k \cdot i \)
+- \( i = \frac{\Delta h}{\Delta l} \)
+- \( v = \frac{q}{n} \)
+- \( k = \frac{v}{i} \), \( v = \frac{Q}{A} \), \( q = \frac{V}{t} \)
+
+---
+
+## 🔹 2. Consolidation Settlement
+
+**Time factor:**  
+\( T_v = \frac{C_v \cdot t}{d^2} \)
+
+**Short-term settlement:**  
+\( s(t) = s_{\text{final}} \left(1 - \frac{2}{\pi} e^{-\frac{\pi^2 T_v}{4}} \right) \)
+
+**Final (long-term) settlement:**  
+\( s = m_v \cdot \Delta \sigma \cdot H \)
+
+---
+
+## 🔹 3. Bearing Capacity
+
+**Undrained (clay):**  
+\( q_f = N_c \cdot s_u + \gamma \cdot D \)
+
+**Drained (sand):**  
+\( q_f = q' \cdot N_q + 0.5 \cdot \gamma \cdot B \cdot N_\gamma \)
+
+**With eccentricity:**  
+\( q_{\text{max}} = \frac{P}{A} + \frac{6M}{B^2} \)
+
+Check:  
+\( q_{\text{max}} < \frac{q_f}{\text{FS}} \)
+
+---
+
+## 🔹 4. Retaining Walls
+
+**Rankine pressure:**  
+\( K_a = \tan^2\left(45^\circ - \frac{\varphi}{2}\right) \)
+
+**Lateral pressure:**  
+\( \sigma_h = K_a \cdot \gamma \cdot z \)
+
+**Pore pressure:**  
+\( u = \gamma_w \cdot h \)
+
+**Prop force by moment balance:**  
+\( \sum M = 0 \Rightarrow P = \frac{\text{soil moment}}{\text{arm}} \)
+
+---
+
+## 🔹 5. Slope Stability
+
+**Moment balance for FoS:**  
+\( Q \cdot a + W \cdot b = P \cdot c + S \cdot R \)
+
+**Design strength (undrained):**  
+\( s_u^{\text{design}} = \frac{s_u}{\text{FS}} \)
+
+Tip: Use geometry for centroids and areas. Draw clearly.
+
+---
+
+## 🔹 6. Contaminant Transport
+
+**Advection-dispersion:**  
+\( C(x,t) = \frac{C_0}{2} \cdot \text{erfc}\left( \frac{x - ut}{2\sqrt{D t}} \right) \)
+
+Where:  
+- \( u = \frac{ki}{n} \) (seepage velocity)  
+- \( D = \tau D_0 + \alpha u \) (dispersion)
+
+---
+
+## 🔹 7. Conceptual Site Model (CSM)
+
+Build a **Source–Pathway–Receptor** model:
+
+- **Source**: Contaminant (e.g. hydrocarbons, arsenic)
+- **Pathway**: e.g. groundwater flow
+- **Receptor**: e.g. aquifer, human health
+
+Always sketch your linkage.
+
+---
 
