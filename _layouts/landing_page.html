@@ -76,5 +76,15 @@
   <footer>
     <p>&copy; {{ site.time | date: '%Y' }} Philip Foster. All rights reserved.</p>
   </footer>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </body>
 </html>
