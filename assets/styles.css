@@ -316,3 +316,44 @@ body.landing main {
   margin: 1rem;
   z-index: 1;
 }
+
+body.bg-barbican {
+  background-image: url('/assets/images/barbican.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: #330000;
+  color: white;
+  position: relative;
+}
+
+body.bg-barbican::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(50, 10, 10, 0.6);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body.bg-dam {
+  background-image: url('/assets/images/dam.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: #330000;
+  color: white;
+  position: relative;
+}
+
+body.bg-dam::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(60, 15, 15, 0.6);
+  z-index: -1;
+  pointer-events: none;
+}
+
