@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Coffee Index
+bg_class: bg-dam
 permalink: /coffee/
 ---
 
