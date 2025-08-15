@@ -6,12 +6,15 @@
   <meta name="description" content="A blog about web development, tutorials, and more.">
   <meta name="keywords" content="blog, web development, tutorials">
   <title>{{ page.title }}</title>
+
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="icon" href="{{ '/assets/images/pip.jpg' | relative_url }}" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <style>
+    /* Base */
     body {
       font-family: 'Futura', 'Jost', sans-serif;
       color: #ffffff;
@@ -98,9 +101,52 @@
         padding: 1rem;
       }
     }
+
+    /* === Page-specific faded background images === */
+    /* Blog -> Barbican */
+    body.bg-barbican {
+      background-image: url('/assets/images/barbican.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll; /* mobile-friendly */
+      background-color: #330000; /* fallback */
+      position: relative;
+      color: #fff;
+    }
+    body.bg-barbican::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(50, 10, 10, 0.6); /* dark red overlay */
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Coffee -> Dam */
+    body.bg-dam {
+      background-image: url('/assets/images/dam.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-color: #330000;
+      position: relative;
+      color: #fff;
+    }
+    body.bg-dam::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(60, 15, 15, 0.6);
+      z-index: -1;
+      pointer-events: none;
+    }
   </style>
 </head>
-<body>
+
+<!-- Add bg_class in page front matter, e.g. bg-barbican or bg-dam -->
+<body class="{{ page.bg_class }}">
   <header>
     <div class="triangle-top-left"></div>
     <div class="triangle-top-right"></div>
