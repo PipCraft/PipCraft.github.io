@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog
+bg_class: bg-barbican
 permalink: /blog/
 ---
 
@@ -35,3 +36,4 @@ permalink: /blog/
     {% endfor %}
   {% endfor %}
 </div>
+
