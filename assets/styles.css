@@ -356,4 +356,20 @@ body.bg-dam::before {
   z-index: -1;
   pointer-events: none;
 }
+/* --- Sticky footer across all pages using the default layout --- */
+html, body { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main { flex: 1 0 auto; }
+
+/* Push footer to the bottom */
+footer {
+  margin-top: auto;
+}
+
 
