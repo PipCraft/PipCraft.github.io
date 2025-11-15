@@ -6,7 +6,7 @@ permalink: /powerpoint/
 <div id="moodle-container">
   
   <div id="moodle-header">
-    <h1>PPTN-101: Advanced PowerPoint Techniques</h1>
+    <h1>PPTN-67: Advanced PowerPoint Techniques</h1>
   </div>
   
   <div id="moodle-content">
@@ -17,13 +17,13 @@ permalink: /powerpoint/
       </h2>
       
       <div class="topic-summary">
-        <p>Welcome, presenters. This module contains the official brief for tonight's event. Your presentation will be graded on creativity, absurdity, and strict adherence to the time limit. Good luck.</p>
+        <p>As part of your PPTN-67 Module, you are required to produce a powerpoint, on a topic of your choosing, (I would reccomend a niche special interest IE Coffee) Each Power point must last no longer than ten minutes and must include absurd transitions and general whimsey. If you have any questions do not hesistate to get in touch with the module lead. </p>
       </div>
       
       <ul class="moodle-activities">
         <li>
           <span class="m-icon">📄</span>
-          <span class="activity-text">Official Event Briefing</span>
+          <span class="activity-text">Lecture 7 Christmas tree decoration workshop</span>
         </li>
         <li>
           <span class="m-icon">🗣️</span>
@@ -31,7 +31,7 @@ permalink: /powerpoint/
         </li>
         <li>
           <span class="m-icon">📤</span>
-          <span class="activity-text">Submission Portal</span>
+          <span class="activity-text">TurnItOut</span>
         </li>
       </ul>
       
@@ -39,7 +39,7 @@ permalink: /powerpoint/
     
     <div class="moodle-topic">
       <h2 class="topic-title">
-        Topic 1: Resources & Guidelines
+        Topic 69: Resources & Guidelines
       </h2>
       
       <ul class="moodle-activities">
