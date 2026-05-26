@@ -9,19 +9,27 @@ permalink: /blog/
 <p>Here are all the latest posts:</p>
 
 <div class="blog-posts">
-  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+  {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% comment %} 
+    If the line above still acts up on your local setup, 
+    use this alternate bulletproof syntax instead:
+    {% assign postsByYear = site.posts | group_by_exp: "item", "item.date.year" %}
+  {% endcomment %}
+
   {% for year in postsByYear %}
     <h2>{{ year.name }}</h2>
     {% for post in year.items %}
       <article class="blog-post">
         {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }} thumbnail" class="post-thumbnail">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }} thumbnail" class="post-thumbnail">
         {% endif %}
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p><strong>Published:</strong> {{ post.date | date: "%B %d, %Y" }}</p>
+        
         {% assign words = post.content | number_of_words %}
-        {% assign minutes = words | divided_by:200 %}
+        {% assign minutes = words | divided_by: 200.0 %}
         <p><em>~{{ minutes | ceil }} min read</em></p>
+        
         <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
 
         {% if post.tags %}
@@ -31,9 +39,8 @@ permalink: /blog/
             {% endfor %}
           </p>
         {% endif %}
-        <a href="{{ post.url }}">Read More →</a>
+        <a href="{{ post.url | relative_url }}">Read More →</a>
       </article>
     {% endfor %}
   {% endfor %}
 </div>
-
