@@ -7,10 +7,72 @@
     <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
     <link rel="icon" href="{{ '/assets/images/pip.jpg' | relative_url }}" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    {% if page.bg_image %}
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            color: white;
+            background-color: #1a1a1a; /* Dark fallback */
+        }
+
+        /* Fixed background element mirroring portfolio styling */
+        .post-background-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('{{ page.bg_image | relative_url }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: -2;
+        }
+
+        /* Protective overlay for content legibility */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(25, 25, 25, 0.85) 0%,
+                rgba(15, 15, 15, 0.75) 50%,
+                rgba(25, 25, 25, 0.85) 100
+            );
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Frosted card style container wrapping the post content */
+        .post-card-wrapper {
+            background-color: rgba(0, 0, 0, 0.45);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Ensure links stay visible over dark backgrounds if needed */
+        .post-content a {
+            color: #ff8888;
+        }
+    </style>
+    {% endif %}
 </head>
 <body>
+    {% if page.bg_image %}
+        <div class="post-background-layer"></div>
+    {% endif %}
+
     <header>
         <div class="container">
             <h1>{{ site.title }}</h1>
@@ -24,7 +86,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container {% if page.bg_image %}post-card-wrapper{% endif %}">
             <article>
                 <h2>{{ page.title }}</h2>
                 <div class="post-meta">
@@ -43,6 +105,6 @@
         </div>
     </footer>
 </body>
-    <script data-goatcounter="https://pipfoster.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://pipfoster.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
 </html>
