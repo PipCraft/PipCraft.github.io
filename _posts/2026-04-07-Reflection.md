@@ -3,6 +3,7 @@ layout: post
 title: "Reflection"
 date: 2026-04-07
 categories: blog
+bg_image: "/assets/images/hills.jpg"
 tags: [Reflection]
 ---
 
